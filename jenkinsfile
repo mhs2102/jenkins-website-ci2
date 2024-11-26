@@ -10,13 +10,13 @@ pipeline {
         stage('Build Website') {
             steps {
                 // Run the script after making it executable
-                sh './hello.sh'
+                bat 'hello.bat'
             }
         }
         stage('HTML Validation') {
             steps {
                 echo 'Running HTML Validation...'
-                sh 'tidy -q -e index.html || echo "HTML issues detected!"'
+                bat 'tidy -q -e index.html || echo "HTML issues detected!"'
             }
         }
     }
