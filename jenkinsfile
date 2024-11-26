@@ -18,6 +18,6 @@ pipeline {
                 echo 'Running HTML Validation...'
                 bat 'tidy -q -e index.html || echo "HTML issues detected!"'
             }
-         }
+        }
     }
 }
